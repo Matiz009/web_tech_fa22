@@ -1,23 +1,26 @@
-table,th,td{
+table,
+th,
+td {
     border: 2px solid rgb(8, 6, 6);
     border-collapse: collapse;
     padding: 20px;
 }
 
-th{
+th {
     background-color: black;
     color: aliceblue;
 }
-td{
+
+td {
     background-color: lightgray;
     color: darkcyan;
 }
 
-a{
- text-decoration: none;
- color: rgb(22, 129, 223);
-}
-body{
-    font-family: 'Oswald', sans-serif;
+a {
+    text-decoration: none;
+    color: rgb(22, 129, 223);
 }
 
+body {
+    font-family: 'Oswald', sans-serif;
+}
