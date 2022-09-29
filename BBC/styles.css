@@ -1,0 +1,45 @@
+#main {
+    height: 60px;
+    background-color: #000;
+}
+
+#logo {
+    margin-left: 10%;
+}
+
+.text {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.menu {
+    margin-left: 7%;
+}
+
+span {
+    float: right;
+    margin-right: 10%;
+    color: gray;
+    font-size: larger;
+}
+
+.content {
+    width: 95%;
+    margin-right: 100px;
+}
+
+.link {
+    font-size: large;
+    color: grey;
+    text-decoration: dashed;
+}
+
+.news {
+    display: flex;
+    margin-left: 1%;
+}
+
+.sports {
+    display: flex;
+    margin-left: 1%;
+}
