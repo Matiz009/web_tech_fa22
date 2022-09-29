@@ -1,10 +1,15 @@
-#main {
+.main {
     height: 60px;
-    background-color: #000;
+    background-color: #000000;
 }
 
 #logo {
     margin-left: 10%;
+    margin-top: 14px;
+}
+
+.bbc-logo {
+    width: 70px;
 }
 
 .text {
@@ -14,6 +19,8 @@
 
 .menu {
     margin-left: 7%;
+    text-decoration: none;
+    color: white;
 }
 
 span {
@@ -42,4 +49,13 @@ span {
 .sports {
     display: flex;
     margin-left: 1%;
+}
+
+.main-flex {
+    display: flex;
+}
+
+.second-block {
+    display: block;
+    margin: 10px;
 }
