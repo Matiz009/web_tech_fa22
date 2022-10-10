@@ -1,0 +1,13 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#main {
+    text-align: center;
+    color: cadetblue;
+}
+
+p {
+    text-align: center;
+    color: coral;
+}
