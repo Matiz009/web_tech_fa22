@@ -1,0 +1,1 @@
+The student list is mainly used for proper attendance records. if you don't use the attendance feature on the klassly app, you don't have to worry about the list of students too much. - Import students from when parent signed-in for the first time and registered their child. How to manually add a student ? - Enter info on the child and confirm.
