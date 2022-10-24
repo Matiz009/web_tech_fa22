@@ -44,6 +44,7 @@ $(document).ready(function() {
     });
     $("#getInput").click(function() {
         alert("Input: " + $("#inputText").val());
+        $("#inputText").empty();
     });
 });
 
