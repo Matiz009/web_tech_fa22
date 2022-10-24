@@ -32,11 +32,22 @@ $(document).ready(function() {
     $("#slideDown").click(function() {
         $("#panel").slideToggle("slow");
     });
+    $("#stopSliding").click(function() {
+        $("#panel").stop();
+    });
     $("#animate").click(function() {
-        $("#panel").animate({ left: "250px" });
+        $("#box").animate({ left: "100px" }, "slow");
+        $("#box").animate({ fontSize: "3em" }, "slow");
+    });
+    $("#display").click(function() {
+        alert("HTML: " + $("html").html());
+    });
+    $("#getInput").click(function() {
+        alert("Input: " + $("#inputText").val());
     });
 });
 
 function hide() {
     $("div").hide();
+    alert("Some data will be hidden");
 }
