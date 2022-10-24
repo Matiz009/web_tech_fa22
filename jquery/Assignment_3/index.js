@@ -26,6 +26,12 @@ $(document).ready(function() {
         $("#div2").fadeTo("slow", 0.4);
         $("#div3").fadeTo("slow", 0.7);
     });
+    $("#appendTo").click(function() {
+        $("<h5>JQUERY IS COOL :))</h5>").appendTo("h3");
+    });
+    $("#slideDown").click(function() {
+        $("#panel").slideToggle("slow");
+    });
 });
 
 function hide() {
