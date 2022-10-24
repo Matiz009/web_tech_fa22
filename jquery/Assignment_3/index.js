@@ -16,6 +16,11 @@ $(document).ready(function() {
         $("#div2").fadeOut("slow");
         $("#div3").fadeOut(3000);
     });
+    $("#fade-toggle").click(function() {
+        $("#div1").fadeToggle();
+        $("#div2").fadeToggle("slow");
+        $("#div3").fadeToggle(3000);
+    });
 });
 
 function hide() {
