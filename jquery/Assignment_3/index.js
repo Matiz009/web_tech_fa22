@@ -32,6 +32,9 @@ $(document).ready(function() {
     $("#slideDown").click(function() {
         $("#panel").slideToggle("slow");
     });
+    $("#animate").click(function() {
+        $("#panel").animate({ left: "250px" });
+    });
 });
 
 function hide() {
