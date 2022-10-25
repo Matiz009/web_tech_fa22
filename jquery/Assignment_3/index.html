@@ -15,7 +15,7 @@
     <center class="text-success">
         <h2>Jquery Functions</h2>
     </center>
-    <label for="inputPassword5" class="form-label">Input TEXT:</label>
+    <label for="input" class="form-label">Input TEXT:</label>
     <input type="text" id="inputText" class="form-control"><br><br>
 
     <button class="btn btn-primary" id="hide-btn">Hide Everything!</button>
@@ -26,12 +26,19 @@
     <button class="btn btn-dark" id="fade-toggle">Fade Toggle</button>
     <button class="btn btn-dark" id="fade-to">Fade To</button>
     <button class="btn btn-success" id="appendTo">Append To</button>
-    <button class="btn btn-success" id="slideDown">Slide Toggle</button>
+    <button class="btn btn-success" id="slideToggle">Slide Toggle</button>
     <button class="btn btn-success" id="stopSliding">Stop Sliding</button>
     <button class="btn btn-success" id="animate">Animate</button><br>
     <hr>
     <button class="btn btn-secondary" id="display">Display Html</button>
     <button class="btn btn-secondary" id="getInput">Display Input</button>
+    <button class="btn btn-danger" id="getAPI">Get Data From API</button>
+    <button class="btn btn-danger" id="DisplayAPI">Display Data From API</button>
+    <button class="btn btn-danger" id="DeleteAPI">Delete Data From API</button>
+    <button class="btn btn-success" id="before">Display Data before p tag</button>
+    <button class="btn btn-secondary" id="after">Display Data after p tag</button>
+    <button id="bindMe" class="btn btn-primary">Bind Function</button>
+
     <br>
     <br>
     <div class="test" id="box">
@@ -45,8 +52,9 @@
         <div id="div3"></div>
     </center>
     <br>
-    <div id="flip">Click to slide down panel</div>
-    <div id="panel">JQUERY!</div>
+    <div id="flip"></div>
+    <div id="panel">JQUERY!</div><br>
+    <div class="data"></div>
 
     <script src="./jquery-3.6.1.min.js"></script>
     <script src="./index.js"></script>

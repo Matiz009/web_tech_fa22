@@ -27,9 +27,9 @@ $(document).ready(function() {
         $("#div3").fadeTo("slow", 0.7);
     });
     $("#appendTo").click(function() {
-        $("<h5>JQUERY IS COOL :))</h5>").appendTo("h3");
+        $("<h5>JQUERY IS COOL :))</h5>").appendTo(".data");
     });
-    $("#slideDown").click(function() {
+    $("#slideToggle").click(function() {
         $("#panel").slideToggle("slow");
     });
     $("#stopSliding").click(function() {
@@ -42,13 +42,58 @@ $(document).ready(function() {
     $("#display").click(function() {
         alert("HTML: " + $("html").html());
     });
-    $("#getInput").click(function() {
-        alert("Input: " + $("#inputText").val());
-        $("#inputText").empty();
-    });
+    $("#getInput").click(getValue);
+    $("#getAPI").click(function(){
+        $.ajax({
+            url: "https://usman-cui-recipies.herokuapp.com/api/products",
+            method: "GET",
+            success: function(response){
+                console.log(response);
+                alert("Data received");
+            }
+        });
+    })
+    $("#DisplayAPI").click(function(){
+        $.ajax({
+            url: "https://usman-cui-recipies.herokuapp.com/api/recipes",
+            method: "GET",
+            success: function(response){
+                console.log(response);
+                for(let i=0;i<response.length;i++){
+                    let info = response[i];
+                    $("<h5>"+info.title+"</h5>").appendTo(".data");
+                }
+            }
+        });
+    })
+    $("#DeleteAPI").click(function(){
+        $.ajax({
+            url: "https://usman-cui-recipies.herokuapp.com/api/recipes",
+            method: "DELETE",
+            success: function(){
+                alert("Record Deleted");
+                location.reload();
+            }
+        });
+    })
+
+    $("#before").click(function(){  
+        $(".data").before("<p><b>Pakistan</b></p>");  
+    });  
+    $("#after").click(function(){  
+        $(".data").after("<p><b>Pakistan</b></p>");  
+    });  
+    $("#bindMe").bind("click", function(){
+        alert("Bind Method Called.");
+      });
 });
 
 function hide() {
     $("div").hide();
     alert("Some data will be hidden");
 }
+
+function getValue() {
+    alert("Input: " + $("#inputText").val());
+};
+
