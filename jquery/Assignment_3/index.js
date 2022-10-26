@@ -43,49 +43,49 @@ $(document).ready(function() {
         alert("HTML: " + $("html").html());
     });
     $("#getInput").click(getValue);
-    $("#getAPI").click(function(){
+    $("#getAPI").click(function() {
         $.ajax({
-            url: "https://usman-cui-recipies.herokuapp.com/api/products",
+            url: "https://jsonplaceholder.typicode.com/posts",
             method: "GET",
-            success: function(response){
+            success: function(response) {
                 console.log(response);
                 alert("Data received");
-            }
+            },
         });
     })
-    $("#DisplayAPI").click(function(){
+    $("#DisplayAPI").click(function() {
         $.ajax({
-            url: "https://usman-cui-recipies.herokuapp.com/api/recipes",
+            url: "https://jsonplaceholder.typicode.com/posts",
             method: "GET",
-            success: function(response){
+            success: function(response) {
                 console.log(response);
-                for(let i=0;i<response.length;i++){
+                for (let i = 0; i < response.length; i++) {
                     let info = response[i];
-                    $("<h5>"+info.title+"</h5>").appendTo(".data");
+                    $("<h5>" + info.title + "</h5>").appendTo(".data");
                 }
             }
         });
     })
-    $("#DeleteAPI").click(function(){
+    $("#DeleteAPI").click(function() {
         $.ajax({
-            url: "https://usman-cui-recipies.herokuapp.com/api/recipes",
+            url: "https://jsonplaceholder.typicode.com/posts",
             method: "DELETE",
-            success: function(){
+            success: function() {
                 alert("Record Deleted");
                 location.reload();
             }
         });
     })
 
-    $("#before").click(function(){  
-        $(".data").before("<p><b>Pakistan</b></p>");  
-    });  
-    $("#after").click(function(){  
-        $(".data").after("<p><b>Pakistan</b></p>");  
-    });  
-    $("#bindMe").bind("click", function(){
+    $("#before").click(function() {
+        $(".data").before("<p><b>Pakistan</b></p>");
+    });
+    $("#after").click(function() {
+        $(".data").after("<p><b>Pakistan</b></p>");
+    });
+    $("#bindMe").bind("click", function() {
         alert("Bind Method Called.");
-      });
+    });
 });
 
 function hide() {
@@ -96,4 +96,3 @@ function hide() {
 function getValue() {
     alert("Input: " + $("#inputText").val());
 };
-

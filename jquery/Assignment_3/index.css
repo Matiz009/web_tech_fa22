@@ -1,3 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.form-label {
+    margin: 2px;
+}
+
 .test {
     background-color: brown;
     padding: 20px;
@@ -37,3 +46,6 @@
     display: none;
 }
 
+#bindMe {
+    margin-top: 20px;
+}
