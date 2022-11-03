@@ -1,10 +1,11 @@
-.title_styling {
-    background-color: cadetblue;
-    color: wheat;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.orange{
+    background-color: orange;
 }
-
-.price_styling {
-    color: black;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.blue{
+    color: white;
+    background-color: cadetblue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.img{
+    width: 100px;
 }

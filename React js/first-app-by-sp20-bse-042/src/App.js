@@ -1,17 +1,22 @@
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.css";
-import { Button } from "react-bootstrap";
-import Alert from "react-bootstrap/Alert";
-import Products from "./Components/Products";
+import Products from './components/Products';
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import data from "./data.json";
+
 
 function App() {
   return (
-    <div className="container">
-      <h1> MATI UL REHMAN </h1> <Alert variant="success"> Pakistan won </Alert>
-      <Products title="Banana" price="10 Rs" />
-      <Products title="Apple" price="20 Rs" />
+    <div className="App">
+      {
+        data.map(record=>{
+          return(
+            <div className='col md-4'><Products title={record.title} price={record.price} type={record.type} img={record.img} /></div>
+          )
+        })
+      }
     </div>
   );
 }
+
 
 export default App;

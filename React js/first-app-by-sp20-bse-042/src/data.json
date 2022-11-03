@@ -1,0 +1,21 @@
+[
+    {
+      "title": "Banana",
+      "price": "10 Rs",
+      "type": "Fruit",
+      "img": "https://www.pngpix.com/wp-content/uploads/2016/02/Banana-PNG-image.png"
+    },
+    {
+        "title": "Apple",
+        "price": "20 Rs",
+        "type": "Fruit",
+        "img": "https://pngimg.com/uploads/apple/apple_PNG12405.png"
+      },
+      {
+        "title": "Orange",
+        "price": "30 Rs",
+        "type": "Fruit",
+        "img": "https://i.pinimg.com/736x/05/79/5a/05795a16b647118ffb6629390e995adb.jpg"
+      }
+         
+  ]
