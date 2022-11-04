@@ -1,11 +1,21 @@
-.orange{
+.orange {
     background-color: orange;
 }
-.blue{
+
+.blue {
     color: white;
     background-color: cadetblue;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-.img{
+
+.img {
     width: 100px;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
 }

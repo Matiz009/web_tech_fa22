@@ -1,17 +1,28 @@
 import React from "react";
-import "./Products.css"
+import "./Products.css";
 const Products = (props) => {
-    var title=props.title;
-    var price=props.price;
-    var info=props.type;
-    return (
+  var title = props.title;
+  var price = props.price;
+  var info = props.type;
+  var priceClass = parseInt(price) <= 10 ? "red" : "green";
+  const addToCard = () => {
+    alert(title + " added to cart");
+  };
+  return (
     <div className="product">
-    <h1>Name:{title}</h1>
-    <p><b>Product Price:{price}</b></p>
-    <h5>Type:{info}</h5>  
-    <img src={props.img} alt="pic" className="img"/> <hr/>
+      <h1>Name:{title}</h1>
+      <p className={priceClass}>
+        <b>Product Price:{price}</b>
+      </p>
+      <img src={props.img} alt="pic" className="img" />
+      <h5>Type:{info}</h5>
+      <button className="btn btn-success" id="btn" onClick={addToCard}>
+        {" "}
+        Add to Cart{" "}
+      </button>
+      <hr />
     </div>
-    );
-}                                                                                                  
- 
+  );
+};
+
 export default Products;
