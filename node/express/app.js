@@ -27,6 +27,7 @@ app.get("/", (req, res) => {
     console.clear();
     res.send("Express is rock!");
 });
+//get request
 app.get("/api/products", (req, res) => {
     res.send(products);
 });
