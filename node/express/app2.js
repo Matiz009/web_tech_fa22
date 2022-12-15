@@ -26,8 +26,9 @@ app.post("/api/products/", (req, res) => {
 //delete request
 app.delete("/api/products/:index", (req, res) => {
     const data = fs.readFileSync("./products.json", "utf-8");
-    data.splice(req.params.index, 1);
-    res.send(JSON.parse(data));
+    const info = JSON.parse(data);
+    info.splice(req.params.index, 1);
+    res.send(info);
 });
 
 app.listen(3000);
