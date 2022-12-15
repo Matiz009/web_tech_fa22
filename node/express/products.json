@@ -1,0 +1,31 @@
+[{
+        "name": "Apple",
+        "description": "A fruit",
+        "price": "30Rs"
+    },
+    {
+        "name": "Banana",
+        "description": "A fruit",
+        "price": "10Rs"
+    },
+    {
+        "name": "Mango",
+        "description": "A fruit",
+        "price": "60Rs"
+    },
+    {
+        "name": "Onion",
+        "description": "A Vegetable",
+        "price": "90Rs"
+    },
+    {
+        "name": "Ginger",
+        "description": "A Vegetable",
+        "price": "220Rs"
+    },
+    {
+        "name": "Carrot",
+        "description": "A Vegetable",
+        "price": "30Rs"
+    }
+]
