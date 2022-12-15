@@ -20,8 +20,9 @@ app.post("/api/products/", (req, res) => {
     const data = fs.readFileSync("./products.json", "utf-8");
     console.clear();
     console.log(data); //reading file
-    fs.appendFileSync("./products.json", req.body.name); //adding further data
-    res.send(JSON.parse(data));
+    const info = JSON.parse(data);
+    info.push(req.body.name);
+    res.send(info);
 });
 //delete request
 app.delete("/api/products/:index", (req, res) => {
