@@ -24,6 +24,16 @@ app.post("/api/products/", (req, res) => {
     info.push(req.body.name);
     res.send(info);
 });
+
+//post request
+app.put("/api/products/", (req, res) => {
+    const data = fs.readFileSync("./products.json", "utf-8");
+    console.clear();
+    console.log(data); //reading file
+    const info = JSON.parse(data);
+    info[req.params.index] = req.body.name;
+    res.send(info[req.params.index]);
+});
 //delete request
 app.delete("/api/products/:index", (req, res) => {
     const data = fs.readFileSync("./products.json", "utf-8");
