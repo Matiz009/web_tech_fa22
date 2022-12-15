@@ -26,7 +26,7 @@ app.post("/api/products/", (req, res) => {
 });
 
 //post request
-app.put("/api/products/", (req, res) => {
+app.put("/api/products/:index", (req, res) => {
     const data = fs.readFileSync("./products.json", "utf-8");
     console.clear();
     console.log(data); //reading file
