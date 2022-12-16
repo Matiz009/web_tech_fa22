@@ -1,13 +1,14 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-app.listen(3000, () => console.log("Server is running"));
-
+mongoose.set("strictQuery", false);
 mongoose
-    .connect("mongodb://localhost:27017/plantsData", { useNewUrlParser: true })
-    .then(() => {
-        console.log("connected to db");
+    .connect("mongodb://localhost:27017", {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
     })
-    .catch((err) => {
-        console.log(err.message);
+    .then(console.log("Connected..."))
+    .catch((error) => {
+        console.log(error.message);
     });
+app.listen(3000, () => console.log("Server is running"));
