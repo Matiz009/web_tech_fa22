@@ -10,9 +10,10 @@ mongoose
     })
     .then(async() => {
         console.log("connected");
-        await CreateUser();
+        let user = await CreateUser(2, "aliraza@gmail.com", "@hsgdgd24");
+        console.log(user);
     })
     .catch((error) => {
         console.log(error);
     });
-app.listen(3000, () => console.log("Server is running"));
+app.listen(3001, () => console.log("Server is running"));
