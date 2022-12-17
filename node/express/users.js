@@ -8,4 +8,14 @@ const CreateUser = async(id, email, password) => {
     await user.save();
     return user;
 };
+const getUsers = async() => {
+    let users = await userModel.find();
+    return users;
+};
+const delUsers = async(_id) => {
+    let user = await userModel.findByIdAndDelete(_id);
+    return user;
+};
 module.exports.CreateUser = CreateUser;
+module.exports.getUsers = getUsers;
+module.exports.delUsers = delUsers;
