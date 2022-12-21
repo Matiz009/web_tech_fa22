@@ -11,12 +11,3 @@ h1 {
     background-color: #00B7FF;
     color: aliceblue;
 }
-
-#menu>li {
-    display: inline;
-    padding: 20px;
-}
-
-#menu>li>a {
-    text-decoration: none;
-}

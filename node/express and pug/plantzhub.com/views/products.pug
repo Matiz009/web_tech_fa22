@@ -1,5 +1,18 @@
 extends ./layouts/top.pug
 block content
-    h1 Home
-    h1 Pug is booz🤦‍♀️
-    p this is blah blah blah
+    h1=title
+    h3 List of Products 
+    table.table
+        thead
+            tr
+                th Id
+                th Name
+                th Price
+                th Type
+        tbody 
+            each product in products
+                tr
+                    td=product.id
+                    td=product.name
+                    td=product.price
+                    td=product.type
