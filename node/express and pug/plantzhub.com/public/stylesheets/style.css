@@ -1,8 +1,22 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+    color: #00B7FF;
+}
+
+h1 {
+    background-color: #00B7FF;
+    color: aliceblue;
+}
+
+#menu>li {
+    display: inline;
+    padding: 20px;
+}
+
+#menu>li>a {
+    text-decoration: none;
 }
