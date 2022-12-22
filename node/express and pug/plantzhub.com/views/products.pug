@@ -1,7 +1,9 @@
 extends ./layouts/top.pug
 block content
-    h1=title
     h3 List of Products 
+            a(href="/products/add", class="btn btn-success ") Add New Product
+            a(href="/products/delete", class="btn btn-danger ") Delete Product
+            a(href="/products/edit", class="btn btn-secondary ") Edit Product
     table.table
         thead
             tr
