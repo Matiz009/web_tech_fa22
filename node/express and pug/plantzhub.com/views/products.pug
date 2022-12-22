@@ -2,8 +2,6 @@ extends ./layouts/top.pug
 block content
     h3 List of Products 
             a(href="/products/add", class="btn btn-success ") Add New Product
-            a(href="/products/delete", class="btn btn-danger ") Delete Product
-            a(href="/products/edit", class="btn btn-secondary ") Edit Product
     table.table
         thead
             tr
@@ -11,6 +9,8 @@ block content
                 th Name
                 th Price
                 th Type
+                th Action
+                th Action
         tbody 
             each product in products
                 tr
@@ -18,3 +18,7 @@ block content
                     td=product.name
                     td=product.price
                     td=product.type
+                    td 
+                        a(href="/products/delete/"+product._id, class="btn btn-danger") Delete
+                    td
+                         a(href="/products/edit/"+product._id, class="btn btn-warning") Edit
