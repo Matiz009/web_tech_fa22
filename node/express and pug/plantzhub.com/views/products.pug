@@ -11,6 +11,7 @@ block content
                 th Type
                 th Action
                 th Action
+                th Action
         tbody 
             each product in products
                 tr
@@ -22,3 +23,5 @@ block content
                         a(href="/products/delete/"+product._id, class="btn btn-danger") Delete
                     td
                          a(href="/products/edit/"+product._id, class="btn btn-warning") Edit
+                    td
+                         a(href="/cart"+product._id, class="btn btn-info") Add to Cart
