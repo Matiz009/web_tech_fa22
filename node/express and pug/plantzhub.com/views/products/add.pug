@@ -1,3 +1,17 @@
 extends ../layouts/top.pug
 block content
     h1 Add New Product
+     form(action="/products/add",method="post")
+        form-group
+            h5(for="Id") Product Id
+            input#id(type="text", class="form-control", name="id")
+        .form-group
+            h5(for="name") Product Name
+            input#name(type="text", class="form-control", name="name")
+        .form-group
+            h5(for="price") Product Price
+            input#price(type="text", class="form-control", name="price")
+        form-group
+            h5(for="type") Product Type
+            input#type(type="text", class="form-control", name="type")
+        input(type="submit", class="btn btn-success")
