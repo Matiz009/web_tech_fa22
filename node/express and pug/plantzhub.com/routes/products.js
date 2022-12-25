@@ -23,11 +23,7 @@ router.get("/delete/:id", async function(req, res, next) {
     let product = await Product.findByIdAndDelete(req.params.id);
     res.redirect("/products");
 });
-router.get("/cart/:id", async function(req, res, next) {
-    let product = await Product.findById(req.params.id);
-    console.log("Add This Product in cart");
-    res.redirect("/products");
-});
+
 router.get("/edit/:id", async function(req, res, next) {
     let product = await Product.findById(req.params.id);
     res.render("products/edit", { product });
