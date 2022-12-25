@@ -1,3 +1,23 @@
 extends layout
 block content
-  h1  My Shopping Cart
+  h1 My shopping Cart
+    - var total=0;
+    table.table
+      thead
+         th Name
+         th Price
+         th Type
+         th Action
+      tbody
+          each item in cart
+            - total+=parseInt(item.price)
+            tr
+              td=item.name
+              td=item.price
+              td=item.type
+               td
+                a(href="/cart/remove/"+item._id, class="btn btn-danger") Remove Item
+      tfoot
+        tr
+          td Total
+          td= total
