@@ -13,8 +13,14 @@ router.get("/cart", function(req, res, next) {
 router.get("/cart/:id", async function(req, res, next) {
     let product = await Product.findById(req.params.id);
     console.log("Add This Product in cart");
-    res.redirect("../products");
+    let cart = [];
+    if (req.cookies.cart) {
+        cart = req.cookies.cart;
+    }
+    res.cookie("cart", cart);
+    res.redirect("/products");
 });
+
 
 
 
