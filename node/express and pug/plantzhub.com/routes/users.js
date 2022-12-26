@@ -14,6 +14,7 @@ router.post("/register", async function(req, res, next) {
 router.get("/login", function(req, res, next) {
     res.render("users/login");
 });
+
 router.post("/login", async function(req, res, next) {
     let user = await User.findOne({
         email: req.body.email,
@@ -24,5 +25,10 @@ router.post("/login", async function(req, res, next) {
     }
     req.session.user = user;
     return res.redirect("/");
+});
+
+router.get("/logout", function(req, res, next) {
+    req.session.user = null;
+    res.render("users/login");
 });
 module.exports = router;
