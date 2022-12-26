@@ -5,7 +5,7 @@ var Product = require("../models/product");
 /* GET products page. */
 router.get("/", async function(req, res, next) {
     let products = await Product.find();
-    //console.log(products);
+    console.log(req.session.user);
     //res.send(products);
     res.render("products", { products });
 });
