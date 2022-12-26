@@ -1,3 +1,16 @@
-extends layout
+extends ../layout
 block content
-  h1 Register User
+  h1 Signup
+  <br/>
+    form(action="/users/register",method="post")
+        form-group
+            h5(for="Name") Name
+            input#name(type="text", class="form-control", name="name")
+        form-group
+            h5(for="Email") Email
+            input#email(type="text", class="form-control", name="email")
+        .form-group
+            h5(for="name") Password
+            input#password(type="password", class="form-control", name="password")
+    
+        input(type="submit", class="btn btn-info" value="Register")
