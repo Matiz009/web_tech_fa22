@@ -7,7 +7,7 @@ var mongoose = require("mongoose");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/api/users");
 var productRouter = require("./routes/api/products");
-
+var config = require("config");
 var app = express();
 
 // view engine setup
@@ -41,7 +41,7 @@ app.use(function(err, req, res, next) {
 
 mongoose.set("strictQuery", false);
 mongoose
-    .connect("mongodb://localhost:27017/restApi", {
+    .connect(config.get("db"), {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
