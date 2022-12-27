@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
-
+const Product = require("../../models/product");
 router.get("/", async(req, res) => {
-    return res.send(["Pen", "Pencil"]);
+    let product = await Product.find();
+    return res.send(product);
 });
 module.exports = router;
