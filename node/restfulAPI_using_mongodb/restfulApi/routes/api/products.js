@@ -1,9 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const Product = require("../../models/product");
+const { Product } = require("../../models/product");
+const validateProduct = require("../../middlewares/validateProduct");
 //getting multiple records
 router.get("/", async(req, res) => {
-    let products = await Product.find();
+    let page = Number(req.query.page ? req.query.page : 1);
+    let perPage = Number(req.query.perPage ? req.query.perPage : 10);
+    let skipRecords = perPage * (page - 1);
+    let products = await Product.find().skip(skipRecords).limit(perPage);
     return res.send(products);
 });
 //getting single records
@@ -21,7 +25,7 @@ router.get("/:id", async(req, res) => {
     }
 });
 //update
-router.put("/:id", async(req, res) => {
+router.put("/:id", validateProduct, async(req, res) => {
     let product = await Product.findById(req.params.id);
     product.name = req.body.name;
     product.price = req.body.price;
@@ -36,7 +40,7 @@ router.delete("/:id", async(req, res) => {
 });
 
 //insert
-router.post('/', async(req, res) => {
+router.post("/", validateProduct, async(req, res) => {
     try {
         let product = new Product();
         product.id = req.body.id;
@@ -48,5 +52,5 @@ router.post('/', async(req, res) => {
         res.status(400).send("invalid bad request!");
         console.log(error);
     }
-})
+});
 module.exports = router;
